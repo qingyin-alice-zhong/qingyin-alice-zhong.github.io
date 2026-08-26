@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qingyin Zhong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="photo.jpg" alt="Qingyin Zhong" class="avatar">
+                <h1>Qingyin Zhong</h1>
+                <p class="subtitle">M.Eng in ECE<br>Cornell University</p>
+            </div>
+            <nav class="contact-info">
+                <a href="mailto:qz425@cornell.edu"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/qingyin-zhong-alice" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/qingyin-zhong" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </nav>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a Master of Engineering student in Electrical and Computer Engineering at 
+                    <a href="https://www.cornell.edu/">Cornell University</a> (expected Dec 2026), 
+                    with a B.S. from <a href="https://www.seu.edu.cn/english/">Southeast University</a>.
+                </p>
+                <p>
+                    My interests lie in <strong>microarchitecture design</strong> (pipeline front-end, branch prediction), 
+                    <strong>hardware-software codesign</strong>, and <strong>FPGA prototyping</strong>. 
+                    I have hands-on experience with gem5 cycle-accurate modeling, RTL design &amp; verification (SystemVerilog/Verilog), 
+                    and FPGA-based system development.
+                </p>
+                <p>
+                    I am actively seeking <strong>full-time positions in digital design, verification, or computer architecture</strong> 
+                    starting early 2027.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h2>Industry Experience</h2>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>Digital IC Design Intern</h3>
+                            <p class="org">ByteDance, Beijing, China</p>
+                        </div>
+                        <span class="date">May – Sep 2026</span>
+                    </div>
+                    <p class="entry-title">Branch Prediction Unit Microarchitecture Design for AI Processor</p>
+                    <ul>
+                        <li>Owned BPU microarchitecture exploration for an out-of-order AI processor CPU core, from gem5 modeling to RTL integration.</li>
+                        <li>Implemented 4 speculative pipeline schemes for a register-value-correlated predictor; evaluated timing–accuracy tradeoffs.</li>
+                        <li>Designed writeback early-feed + undo-log rollback on squash; reduced SPEC CPU 2017 misprediction by 11%–28%.</li>
+                        <li>Ported predictor into XiangShan RISC-V RTL; passed Verilator EMU + NEMU DiffTest co-simulation with 0 mismatch.</li>
+                        <li>Built AI-assisted EDA toolchain for hardware verification workflows under multi-security-level compliance.</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>FPGA Engineer Intern</h3>
+                            <p class="org">Wuxi Semiconductor Photon Counting Technology Ltd, Wuxi, China</p>
+                        </div>
+                        <span class="date">Mar – Aug 2025</span>
+                    </div>
+                    <p class="entry-title">Data Processing System for Photon Counting Detectors</p>
+                    <ul>
+                        <li>Built Verilog-based testbenches on Kintex-7 to validate a custom photon-counting ASIC at wafer-level.</li>
+                        <li>Implemented functional &amp; timing verification logic targeting single-photon event detection.</li>
+                        <li>Deployed coverage-driven methods on Artix-7, increasing verification accuracy from 50% → 85%.</li>
+                        <li>Redesigned signal-path test fixture, reducing thermal hotspots from 125℉ → 77℉ and improving measurement stability.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Selected Projects</h2>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>FPGA Prototype Validation of NPU Control</h3>
+                            <p class="org">Cornell University</p>
+                        </div>
+                        <span class="date">Oct 2025 – Mar 2026</span>
+                    </div>
+                    <ul>
+                        <li>Prototyped a lightweight NPU architecture on FPGA for data-intensive operators, validating chip-level design feasibility.</li>
+                        <li>Implemented runtime scheduling logic in HDL for data movement and bandwidth management between SRAM and PE array.</li>
+                        <li>Analyzed impact of PE array size, buffer depth, and memory bandwidth on throughput and timing convergence on DE1-SoC.</li>
+                        <li>Built cycle-accurate functional and control models to evaluate dataflow organization and ASIC RTL complexity.</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>NPU Kernel Constrained Optimization</h3>
+                            <p class="org">Computer Systems Laboratory, Cornell University</p>
+                        </div>
+                        <span class="date">Aug 2025 – May 2026</span>
+                    </div>
+                    <ul>
+                        <li>Built automated workflow mapping high-level operators to AMD NPU AIE execution units with functional validation.</li>
+                        <li>Optimized data alignment based on SIMD width and memory-bank distribution; improved NPUEval pass rate from 58% to 75%.</li>
+                        <li>Completed end-to-end deployment of SmolVLA operators on hardware; <strong>team won 2nd place in FCCM 2026 Hackathon</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>Integrated Circuit Design (0.15 μm BCD Process)</h3>
+                            <p class="org">Southeast University</p>
+                        </div>
+                        <span class="date">Mar 2023 – Feb 2025</span>
+                    </div>
+                    <ul>
+                        <li>Completed mixed-signal IC design including CMOS, BJT, DMOS, and Hall front-end modules.</li>
+                        <li>Used Sentaurus TCAD to optimize device structure, achieving 10× improvement in 1/f noise (10 Hz–10 kHz).</li>
+                        <li>Completed layout design in Cadence Virtuoso, passed DRC/LVS, and delivered GDSII tapeout.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2>Publications &amp; Patents</h2>
+
+                <div class="pub-entry">
+                    <p>
+                        G. Zheng, <strong>Q. Zhong</strong>, et al. 
+                        "High Sensitivity Lateral Hall Device in Silicon on Insulator (SOI) Platform." 
+                        <em>IEEE Sensors 2024</em>, Oct. 2024, Kobe, Japan.
+                    </p>
+                </div>
+
+                <div class="pub-entry">
+                    <p>
+                        <strong>Q. Zhong</strong>, et al. 
+                        "Gate-Controlled Buried-Channel Hall Chip and Its Manufacturing and Using Method." 
+                        <em>Chinese Patent Application CN202510575422.X</em>, first inventor.
+                    </p>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>Cornell University</h3>
+                            <p class="org">M.Eng in Electrical and Computer Engineering</p>
+                        </div>
+                        <span class="date">Aug 2025 – Dec 2026 (expected)</span>
+                    </div>
+                    <p class="coursework">
+                        <strong>Coursework:</strong> Computer Architecture · Hardware Acceleration via FPGA · 
+                        Intro to Digital VLSI Design · Embedded Operating Systems · Digital Systems Design
+                    </p>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <div>
+                            <h3>Southeast University</h3>
+                            <p class="org">B.S. in Electronic Science and Technology</p>
+                        </div>
+                        <span class="date">Sep 2021 – Jun 2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <p>Verilog, SystemVerilog, C/C++, Python, CUDA, Shell, Tcl, Perl</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>EDA &amp; Tools</h4>
+                        <p>Synopsys DC/VCS, Cadence Virtuoso, HSPICE, Verilator, ModelSim, Quartus, Vivado</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Simulation &amp; Verification</h4>
+                        <p>gem5, Verilator RTL simulation, DiffTest co-verification, coverage-driven verification</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Focus Areas</h4>
+                        <p>Microarchitecture (pipeline front-end, branch prediction), HW-SW codesign, FPGA prototyping</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>Last updated: August 2026</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
